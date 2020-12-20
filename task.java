@@ -18,6 +18,10 @@ public class task{
         return number; 
     }
 
+    public String toString(){
+        return "Task " + getNumber() + ": " + getTask(); 
+    }
+
 
 
 }
