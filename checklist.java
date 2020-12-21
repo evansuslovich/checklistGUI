@@ -9,9 +9,9 @@ public class checklist{
     private int counter = 0;
     
    public checklist(){
-        makeNewTask();
         makeNewTask(); 
-        
+        makeNewTask(); 
+        makeNewTask(); 
         printTasks(); 
     }
 
@@ -27,10 +27,7 @@ public class checklist{
 
         System.out.println("Enter a task");
         taskString = scan.nextLine(); 
-        
-    
         counter++; 
-
 
         tasks.add(new task(taskString,counter));
 
