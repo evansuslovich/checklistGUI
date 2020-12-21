@@ -21,9 +21,4 @@ public class task{
     public String toString(){
         return "Task " + getNumber() + ": " + getTask(); 
     }
-
-    
-
-
-
 }
