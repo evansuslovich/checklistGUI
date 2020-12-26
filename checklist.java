@@ -12,6 +12,8 @@ public class checklist{
         makeNewTask(); 
         makeNewTask(); 
         makeNewTask(); 
+        makeNewTask();
+        makeNewTask(); 
         printTasks(); 
     }
 
