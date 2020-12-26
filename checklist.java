@@ -10,10 +10,6 @@ public class checklist{
     
    public checklist(){
         makeNewTask(); 
-        makeNewTask(); 
-        makeNewTask(); 
-        makeNewTask();
-        makeNewTask(); 
         printTasks(); 
     }
 
