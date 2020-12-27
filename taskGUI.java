@@ -1,7 +1,6 @@
 import javax.swing.*; 
 import java.awt.*; 
 
-
 public class taskGUI{
     static MiddlePanel middlePanel = new MiddlePanel();
     static TopPanel topPanel = new TopPanel(); 
@@ -17,7 +16,7 @@ public class taskGUI{
 
         frame.add(topPanel, BorderLayout.NORTH);
         frame.add(middlePanel, BorderLayout.CENTER);
-        
+
         frame.setVisible(true);
     }
     public static void main(String[] args){
