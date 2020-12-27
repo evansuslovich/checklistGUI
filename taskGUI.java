@@ -3,6 +3,8 @@ import java.awt.*;
 
 
 public class taskGUI{
+    static MiddlePanel middlePanel = new MiddlePanel();
+    static TopPanel topPanel = new TopPanel(); 
 
     public taskGUI(){
         JFrame frame = new JFrame(); 
@@ -11,15 +13,11 @@ public class taskGUI{
         frame.setLayout(new BorderLayout()); 
         frame.getRootPane().setBorder(BorderFactory.createMatteBorder(5,5,5,5,Color.WHITE)); 
 
+        
 
-        JPanel middlePanel = new JPanel(); 
-        middlePanel.setBackground(new Color(255,165,0)); 
-
-        frame.add(middlePanel, BorderLayout.CENTER); 
-
-
-
-
+        frame.add(topPanel, BorderLayout.NORTH);
+        frame.add(middlePanel, BorderLayout.CENTER);
+        
         frame.setVisible(true);
     }
     public static void main(String[] args){
@@ -27,3 +25,7 @@ public class taskGUI{
         new taskGUI(); 
     }
 }
+
+
+
+
