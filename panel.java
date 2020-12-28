@@ -36,9 +36,8 @@ public class Panel extends JPanel{
                 // When the button is clicked I want it to add to the main panel
                 counter++; 
                 tasks.add(new task(textField.getText(),counter,tasks));
-                addNewTask((counter - 1)); 
-
-                //printTasks(); 
+                addNewTask(counter-1);
+                
             }
         });
         ////////////////////// Top Panel 
@@ -46,15 +45,10 @@ public class Panel extends JPanel{
         ////////////////////// Middle Panel 
 
         middlePanel.setBackground(new Color(255,69,0)); 
-        //middlePanel.setLayout(new SpringLayout()); 
-        middlePanel.setLayout(new BoxLayout(middlePanel, BoxLayout.LINE_AXIS));
-        for(int i = 0; i < tasks.size(); i++){
-            add(tasks.get(i));
-        }
+        middlePanel.setLayout(new BoxLayout(middlePanel, BoxLayout.Y_AXIS));
+        
 
         ////////////////////// Middle Panel 
-
-
 
         // this 
         add(topPanel, BorderLayout.NORTH); 
@@ -74,8 +68,8 @@ public class Panel extends JPanel{
         for(int i = 0; i < tasks.size(); i++){
             middlePanel.add(tasks.get(i)); 
         }
-        //middlePanel.add(tasks.get(taskNumber)); 
-        //System.out.println(tasks.get(tasks.size()-1).toString());
-
+        middlePanel.invalidate();
+        middlePanel.validate();
+        middlePanel.repaint();
     }
 }
