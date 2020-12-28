@@ -1,35 +1,32 @@
 import javax.swing.*; 
 import java.awt.*; 
 import java.awt.event.*; 
+import java.util.LinkedList; 
 
-
-public class task{
-    //private static final long serialVersionUID = 1L; 
+public class task extends JPanel{
+    private static final long serialVersionUID = 1L;
 
     private String task; 
     private int number; 
 
-    JButton checkMark = new JButton(); 
+    JButton checkMark = new JButton();
 
-    JPanel panel = new JPanel(); 
-
-    public task(String task, int number){
-        this.task = task; 
-        this.number = number; 
-        
-        panel.setLayout(new FlowLayout());
+    public task(String task, int number, LinkedList<task> tasks) {
+        this.task = task;
+        this.number = number;
+        setLayout(new FlowLayout());
 
         JLabel label = new JLabel("Task " + number + ": " + task); 
         label.setFont(new Font("Serif",Font.BOLD, 12));
         ImageIcon icon = new ImageIcon("check.png");
         JButton button = new JButton(icon); 
 
-        panel.add(label); 
-        panel.add(button); 
+        add(label); 
+        add(button); 
 
         button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                
+                tasks.remove(number-1); 
             }
         });
     }
