@@ -14,9 +14,9 @@ public class TopPanel extends JPanel{
     JTextField textField = new JTextField("Enter Task"); 
     JButton button = new JButton("Add Task"); 
 
-    private LinkedList<task> tasks = new LinkedList<task>();
+    static LinkedList<task> tasks = new LinkedList<task>();
 
-    //static MiddlePanel middlePanel = new MiddlePanel(); 
+    static MiddlePanel middlePanel = new MiddlePanel(); 
     public TopPanel(){
         this.setBackground(new Color(255,165,0)); 
         this.setLayout(new FlowLayout()); 
@@ -29,15 +29,9 @@ public class TopPanel extends JPanel{
             {
                 // When the button is clicked I want it to add to the main panel
                 counter++; 
-                //middlePanel.add(new task(textField.getText(), counter)); 
-                
-                //System.out.println(counter + " " + textField.getText());
+                tasks.add(new task(textField.getText(),counter,tasks));
 
-
-                tasks.add(new task(textField.getText(),counter));
-                //System.out.println(new task(textField.getText(),counter)); 
                 printTasks(); 
-
             }
         });
     }
