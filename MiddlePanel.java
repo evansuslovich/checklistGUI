@@ -11,7 +11,7 @@ public class MiddlePanel extends JPanel{
     public MiddlePanel(){
         setBackground(new Color(255,69,0)); 
         setLayout(new SpringLayout()); 
-        
+
         
     }
 }
