@@ -14,10 +14,11 @@ public class task extends JPanel{
     public task(String task, int number, LinkedList<task> tasks) {
         this.task = task;
         this.number = number;
+
         setLayout(new FlowLayout());
 
         JLabel label = new JLabel("Task " + number + ": " + task); 
-        label.setFont(new Font("Serif",Font.BOLD, 12));
+        label.setFont(new Font("Serif",Font.BOLD, 24));
         ImageIcon icon = new ImageIcon("check.png");
         JButton button = new JButton(icon); 
 
