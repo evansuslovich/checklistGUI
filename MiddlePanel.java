@@ -1,3 +1,4 @@
+/*
 import javax.swing.*; 
 import java.awt.*; 
 import java.util.LinkedList; 
@@ -28,3 +29,4 @@ public class MiddlePanel extends JPanel{
         }
 	}
 }
+*/
