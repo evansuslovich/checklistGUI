@@ -30,8 +30,8 @@ public class task extends JPanel{
 
         button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                panel.removeTask(number-1);
                 tasks.remove(number-1); 
+                panel.removeTask(number-1);
 
             }
         });

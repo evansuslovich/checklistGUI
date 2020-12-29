@@ -75,17 +75,16 @@ public class Panel extends JPanel{
         printTasks(); 
     }
     public void removeTask(int index){
+        printTasks(); 
+
         // index is where the task is going to be removed
         for(int i = 0; i < tasks.size(); i++){
-            if(i == index){
-                middlePanel.remove(tasks.get(i)); 
-            }
+          middlePanel.add(tasks.get(i)); 
         }        
         middlePanel.invalidate();
         middlePanel.validate(); 
         middlePanel.repaint();  
         
-        printTasks(); 
 
 
     }
