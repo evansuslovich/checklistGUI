@@ -71,11 +71,11 @@ public class Panel extends JPanel{
             middlePanel.add(tasks.get(i)); 
         }
 
+    
         middlePanel.invalidate();
         middlePanel.validate();
         middlePanel.repaint();
-        
-        printTasks(); 
+    
     }
 
 

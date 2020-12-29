@@ -15,7 +15,6 @@ public class task extends JPanel{
 
 
     JButton checkMark = new JButton();
-    private Panel panel = new Panel(); 
 
     public task(String task, int number, LinkedList<task> tasks){
         this.task = task;
@@ -44,7 +43,6 @@ public class task extends JPanel{
             public void actionPerformed(ActionEvent e){                setVisible(false); 
                 setVisible(false); 
                 tasks.remove(number-1);
-                panel.printTasks(); 
             }
         });
     }
