@@ -36,7 +36,7 @@ public class Panel extends JPanel{
                 // When the button is clicked I want it to add to the main panel
                 counter++; 
                 tasks.add(new task(textField.getText(),counter,tasks));
-                addNewTask(counter-1);
+                addTask();
                 
             }
         });
@@ -64,12 +64,29 @@ public class Panel extends JPanel{
     }
 
     // middlePanel add new task 
-    public void addNewTask(int taskNumber){
+    public void addTask(){
         for(int i = 0; i < tasks.size(); i++){
             middlePanel.add(tasks.get(i)); 
         }
         middlePanel.invalidate();
         middlePanel.validate();
         middlePanel.repaint();
+        
+        printTasks(); 
+    }
+    public void removeTask(int index){
+        // index is where the task is going to be removed
+        for(int i = 0; i < tasks.size(); i++){
+            if(i == index){
+                middlePanel.remove(tasks.get(i)); 
+            }
+        }        
+        middlePanel.invalidate();
+        middlePanel.validate(); 
+        middlePanel.repaint();  
+        
+        printTasks(); 
+
+
     }
 }

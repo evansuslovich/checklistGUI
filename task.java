@@ -11,10 +11,13 @@ public class task extends JPanel{
 
     JButton checkMark = new JButton();
 
+    private Panel panel = new Panel(); 
+
     public task(String task, int number, LinkedList<task> tasks) {
         this.task = task;
         this.number = number;
 
+        setBackground(new Color(255,69,0)); 
         setLayout(new FlowLayout());
 
         JLabel label = new JLabel("Task " + number + ": " + task); 
@@ -27,7 +30,9 @@ public class task extends JPanel{
 
         button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
+                panel.removeTask(number-1);
                 tasks.remove(number-1); 
+
             }
         });
     }
