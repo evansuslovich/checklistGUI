@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+/*import java.util.LinkedList;
 import java.util.Scanner; 
 
 public class checklist{
@@ -9,7 +9,7 @@ public class checklist{
     private int counter = 0;
     
    public checklist(){
-        makeNewTask(); 
+        makeNewTask();
         printTasks(); 
     }
 
@@ -48,3 +48,4 @@ public class checklist{
 
 
     
+*/
