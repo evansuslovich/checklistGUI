@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.LinkedList;
 
+
 public class Panel extends JPanel{
     private static final long serialVersionUID = 1L;
 
@@ -17,7 +18,6 @@ public class Panel extends JPanel{
 
         //MiddlePanel
     JPanel middlePanel = new JPanel(); 
-
  
     static LinkedList<task> tasks = new LinkedList<task>();
 
@@ -34,6 +34,8 @@ public class Panel extends JPanel{
             public void actionPerformed(ActionEvent e)
             {
                 // When the button is clicked I want it to add to the main panel
+               
+
                 counter++; 
                 tasks.add(new task(textField.getText(),counter,tasks));
                 addTask();
@@ -68,24 +70,13 @@ public class Panel extends JPanel{
         for(int i = 0; i < tasks.size(); i++){
             middlePanel.add(tasks.get(i)); 
         }
+
         middlePanel.invalidate();
         middlePanel.validate();
         middlePanel.repaint();
         
         printTasks(); 
     }
-    public void removeTask(int index){
-        printTasks(); 
-
-        // index is where the task is going to be removed
-        for(int i = 0; i < tasks.size(); i++){
-          middlePanel.add(tasks.get(i)); 
-        }        
-        middlePanel.invalidate();
-        middlePanel.validate(); 
-        middlePanel.repaint();  
-        
 
 
-    }
 }
