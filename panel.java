@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.border.Border;
 //import javax.swing.text.FlowView;
 
 import java.awt.*;
@@ -25,7 +26,7 @@ public class Panel extends JPanel{
         setLayout(new BorderLayout()); 
         
         ////////////////////// Top Panel 
-        topPanel.setBackground(new Color(255,165,0)); 
+        topPanel.setBackground(new Color(47, 41, 88)); 
         topPanel.setLayout(new FlowLayout());
         topPanel.add(textField); 
         topPanel.add(button); 
@@ -46,13 +47,24 @@ public class Panel extends JPanel{
 
         ////////////////////// Middle Panel 
 
-        middlePanel.setBackground(new Color(255,69,0)); 
+        middlePanel.setBackground(new Color(47, 41, 88)); 
         middlePanel.setLayout(new BoxLayout(middlePanel, BoxLayout.Y_AXIS));
         
 
         ////////////////////// Middle Panel 
 
+
         // this 
+
+        
+        Border mainBorder = BorderFactory.createLineBorder(Color.WHITE, 5);
+        setBorder(mainBorder);
+
+        Border boarder = BorderFactory.createLineBorder(new Color(193, 84, 255), 2); 
+        topPanel.setBorder(boarder);
+        middlePanel.setBorder(boarder);
+
+
         add(topPanel, BorderLayout.NORTH); 
         add(middlePanel, BorderLayout.CENTER); 
     }

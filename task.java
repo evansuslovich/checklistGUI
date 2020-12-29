@@ -5,7 +5,6 @@ import java.awt.*;
 import java.awt.event.*;
 
 import java.util.LinkedList;
-import java.util.Random;
 
 public class task extends JPanel{
     private static final long serialVersionUID = 1L;
@@ -20,15 +19,12 @@ public class task extends JPanel{
         this.task = task;
         this.number = number;
 
-        setBackground(new Color(255,69,0)); 
+        setBackground(new Color(47, 41, 88)); 
         setLayout(new FlowLayout());
-        Random rand = new Random(); 
         
-        int r1 = rand.nextInt(256);
-        int r2 = rand.nextInt(256);
-        int r3 = rand.nextInt(256);
+        
 
-        Border border = BorderFactory.createLineBorder(new Color(r1, r2, r3), 3);
+        Border border = BorderFactory.createLineBorder(Color.WHITE, 3);
         setBorder(border);
 
         JLabel label = new JLabel("Task " + number + ": " + task); 

@@ -9,10 +9,9 @@ public class taskGUI{
 
         frame.setSize(600,600); 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getRootPane().setBorder(BorderFactory.createMatteBorder(5,5,5,5,Color.YELLOW)); 
+        frame.getRootPane().setBorder(BorderFactory.createMatteBorder(5,5,5,5, new Color(193, 84, 255))); 
 
         frame.add(panel); 
-
         frame.setVisible(true);
     }
     public static void main(String[] args){
